@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import _ from "lodash";
 import RGL, { WidthProvider } from "react-grid-layout";
 import Chartdemo from './chartdemo';
+import Charts from './Charts';
+import Wrapper from './Wrapper';
 
 const ReactGridLayout = WidthProvider(RGL);
 
@@ -17,7 +19,7 @@ class MyFirstGrid extends React.PureComponent {
     constructor(props) {
         super(props);
         const layout = [
-            {i: 'a', x: 0, y: 0, w: 5, h: 4, isResizable: true},
+            {i: 'a', x: 0, y: 0, w: 5, h: 5, isResizable: true},
             {i: 'b', x: 1, y: 0, w: 3, h: 2, minW: 1, maxW: 5,isResizable: true},
             {i: 'c', x: 4, y: 0, w: 1, h: 2, isResizable: true}
           ];
@@ -35,10 +37,11 @@ class MyFirstGrid extends React.PureComponent {
           onLayoutChange={this.onLayoutChange}
             {...this.props}>
             <div key="a"><Chartdemo /></div>
-            <div key="b">123</div>
+            <Wrapper key="b"><Charts /></Wrapper>
             <div key="c">(*)</div>
           </ReactGridLayout>
         )
       }
 }
+
 export default MyFirstGrid;
