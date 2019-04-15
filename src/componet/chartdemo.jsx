@@ -46,7 +46,7 @@ class chartdemo extends React.PureComponent {
                 )}
                 data={this.salesPieData}
                 valueFormat={val => <span dangerouslySetInnerHTML={{ __html: yuan(val) }} />}
-                height={194}
+                height={200}
                 />
             )
         }
