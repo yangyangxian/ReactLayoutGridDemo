@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 
 export default class Wrapper extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.setState("width", )
+    }
+
     render() {
         var that = this;
         var newChildren = React.Children.map(this.props.children, function(child) {
