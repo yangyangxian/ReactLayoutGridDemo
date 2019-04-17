@@ -31,7 +31,7 @@ class chartdemo extends React.PureComponent {
             },
          ];
 
-         this.salesPieData = salesPieData;
+         this.state = { salesPieData }; 
     }
         
         render() {
@@ -40,13 +40,13 @@ class chartdemo extends React.PureComponent {
                 total={() => (
                     <span
                         dangerouslySetInnerHTML={{
-                        __html: yuan(this.salesPieData.reduce((pre, now) => now.y + pre, 0))
+                        __html: yuan(this.state.salesPieData.reduce((pre, now) => now.y + pre, 0))
                         }}
                     />
                 )}
-                data={this.salesPieData}
+                data={this.state.salesPieData}
                 valueFormat={val => <span dangerouslySetInnerHTML={{ __html: yuan(val) }} />}
-                height={200}
+                height={280}
                 />
             )
         }

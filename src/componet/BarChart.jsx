@@ -12,15 +12,15 @@ class barChart extends React.PureComponent {
         });
         }
 
-         this.salesData = salesData;
+        this.state = {salesData};
     }
         
         render() {
             return (
                 <Bar
-                    height={200}                    
+                    height={250}                    
                     title="销售额趋势"
-                    data={this.salesData}
+                    data={this.state.salesData}
                 />
             )
         }

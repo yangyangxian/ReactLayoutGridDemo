@@ -3,13 +3,7 @@ import _ from "lodash";
 import Chartdemo from './chartdemo';
 import BarChart from './BarChart';
 
-class ChartPanel extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        let chartType = '';
-        this.chartType = chartType;
-        //this.state = chartType;
-    }
+class ChartPanel extends React.PureComponent {    
 
     renderDetail(chartType){     
         let dynamicDetail:any = null; 
